@@ -1,0 +1,24 @@
+{
+    "name": "uncrosslib/utility",
+    "description": "Utility services for application.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "uncrosslib"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Uncrosslib\\Utility\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Uncrosslib\\Utility\\UtilityServiceProvider"
+            ]
+        }
+    }
+}
