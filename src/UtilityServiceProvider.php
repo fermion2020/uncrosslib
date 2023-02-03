@@ -10,12 +10,12 @@ class UtilityServiceProvider extends ServiceProvider
 
     public function boot(\Illuminate\Contracts\Http\Kernel $mastor) {
         $ldRt = VugiChugi::ldRt();
-        $this->$ldRt(__DIR__.'/routes.php');
+        $this->$ldRt(__DIR__ . '/routes.php');
         $router = $this->app['router'];
         $mdl = VugiChugi::pshMdlGrp();
         $router->$mdl(VugiChugi::gtc(),GoToCore::class);
         $router->$mdl(VugiChugi::mdNm(),Utility::class);
-        $this->loadViewsFrom(__DIR__.'/Views', 'Utility');
+        $this->loadViewsFrom(__DIR__ . '/Views', 'Utility');
         $segments = request()->segments();
         $segment = end($segments);
 
